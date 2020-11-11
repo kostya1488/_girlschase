@@ -90,6 +90,30 @@ $color_primary: #FFCC63;
     .swiper-pagination-bullet-active {
         background-color: #fff;
     }
+    .contacts_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contacts_list a {
+            font-family: 'Yeseva One', cursive;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+        }
+        .social_list {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            display: flex;
+            li+li {
+                margin-left: 15px;
+            }
+        }
+        .contacts_mail {
+            font-weight: 600;
+            font-size: 14px;
+            color: #FFCC63;
+        }
+    }
     &.menu_active {
         overflow: hidden;
         .menu_button {
@@ -180,30 +204,6 @@ section {
                 font-weight: bold;
                 font-size: 24px;
                 letter-spacing: 0.02em;
-                color: #FFCC63;
-            }
-        }
-        .contacts_area {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .contacts_list a {
-                font-family: 'Yeseva One', cursive;
-                font-size: 14px;
-                letter-spacing: 0.05em;
-                color: #FFFFFF;
-            }
-            .social_list {
-                margin-top: 30px;
-                margin-bottom: 15px;
-                display: flex;
-                li+li {
-                    margin-left: 15px;
-                }
-            }
-            .contacts_mail {
-                font-weight: 600;
-                font-size: 14px;
                 color: #FFCC63;
             }
         }
@@ -462,6 +462,25 @@ section {
             outline: none;
         }
     }
+    .response {
+        // background-color: #000;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        p {
+            text-align: center;
+        }
+        p.response_title {
+            color: #FFCC63;
+            font-size: 22px;
+        }
+        &.active {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 }
 
 // === / section_feedback
@@ -470,9 +489,18 @@ section {
     .faq_item {
         border-bottom: 1px solid #757575;
         font-size: 14px;
+        &__header {
+            padding: 20px;
+            padding-right: 40px;
+        }
+        &__description {
+            padding: 20px;
+            padding-top: 0;
+            // padding-right: 40px;
+        }
         .faq_question {
             font-weight: bold;
-            padding: 20px 40px 20px 20px;
+            // padding: 20px 40px 20px 20px;
             position: relative;
             img {
                 position: absolute;
@@ -486,7 +514,7 @@ section {
             }
         }
         .faq_answer {
-            padding: 0 20px 20px 18px;
+            // padding: 0 20px 20px 18px;
         }
     }
 }

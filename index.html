@@ -374,86 +374,108 @@
     </section>
     <!-- / advantages -->
     <!-- feedback -->
-    <section id="feedback" class="section_feedback">
+    <section id="feedback" class="section_feedback position-relative">
         <div class="container">
-            <div class="row">
-                <div class="section_title">
-                    Заполнить анкету
+            <div class="section_feedback_inner">
+                <div class="row">
+                    <div class="section_title">
+                        Заполнить анкету
+                    </div>
                 </div>
-            </div>
 
-            <nav>
-                <div class="nav" id="nav-tab" role="tablist">
-                    <a class="col-6 form_title active" id="nav-feedback-tab" data-toggle="tab" href="#nav-feedback" role="tab" aria-controls="nav-feedback" aria-selected="true">
+                <nav>
+                    <div class="nav" id="nav-tab" role="tablist">
+                        <a class="col-6 form_title active" id="nav-feedback-tab" data-toggle="tab" href="#nav-feedback" role="tab" aria-controls="nav-feedback" aria-selected="true">
                         Заполнить анкету
                     </a>
-                    <a class="col-6 form_title text-right" id="nav-callback-tab" data-toggle="tab" href="#nav-callback" role="tab" aria-controls="nav-callback" aria-selected="false">
+                        <a class="col-6 form_title text-right" id="nav-callback-tab" data-toggle="tab" href="#nav-callback" role="tab" aria-controls="nav-callback" aria-selected="false">
                         Заказать звонок
                     </a>
-                </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-feedback" role="tabpanel" aria-labelledby="nav-home-tab">
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-feedback" role="tabpanel" aria-labelledby="nav-home-tab">
 
-                    <form action="">
-                        <div class="input_title">
-                            Имя
-                        </div>
-                        <input type="text">
-                        <div class="input_title">
-                            Телефон
-                        </div>
-                        <!-- <input type="text">
+                        <form action="" class="feedback_form">
+                            <div class="input_title">
+                                Имя
+                            </div>
+                            <input type="text">
+                            <div class="input_title">
+                                Телефон
+                            </div>
+                            <!-- <input type="text">
                         <div class="input_title">
                             E-mail
                         </div> -->
-                        <input type="text">
-                        <div class="input_title">
-                            Instagram
-                        </div>
-                        <input type="text">
-                        <div class="input_title">
-                            Есть ли у вас опыт в эскорте?
-                        </div>
-                        <div class="radio_wrap">
-                            <input type="radio" name="age" id="age_yes">
-                            <label for="age_yes">
+                            <input type="text">
+                            <div class="input_title">
+                                Instagram
+                            </div>
+                            <input type="text">
+                            <div class="input_title">
+                                Есть ли у вас опыт в эскорте?
+                            </div>
+                            <div class="radio_wrap">
+                                <input type="radio" name="age" id="age_yes">
+                                <label for="age_yes">
                                 <div class="check_area"></div>
                                 <span>Да</span>
                             </label>
-                        </div>
-                        <div class="radio_wrap">
-                            <input type="radio" name="age" id="age_no" checked>
-                            <label for="age_no">
+                            </div>
+                            <div class="radio_wrap">
+                                <input type="radio" name="age" id="age_no" checked>
+                                <label for="age_no">
                                 <div class="check_area"></div>
                                 <span>Нет</span>
                             </label>
-                        </div>
-                        <div class="input_title">
-                            Сколько вам лет?
-                        </div>
-                        <input type="text">
-                        <button class="button button__secondary">Отправить анкету</button>
-                    </form>
+                            </div>
+                            <div class="input_title">
+                                Сколько вам лет?
+                            </div>
+                            <input type="text">
+                            <button id="form_request_button1" class="button button__secondary">Отправить анкету</button>
+                        </form>
 
+                    </div>
+                    <div class="tab-pane fade" id="nav-callback" role="tabpanel" aria-labelledby="nav-callback-tab">
+
+                        <form action="">
+                            <div class="input_title">
+                                Имя
+                            </div>
+                            <input type="text">
+                            <div class="input_title">
+                                Телефон
+                            </div>
+                            <input type="text">
+
+                            <button id="form_request_button2" class="button button__secondary">Заказать</button>
+                        </form>
+
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="nav-callback" role="tabpanel" aria-labelledby="nav-callback-tab">
+            </div>
 
-                    <form action="">
-                        <div class="input_title">
-                            Имя
-                        </div>
-                        <input type="text">
-                        <div class="input_title">
-                            Телефон
-                        </div>
-                        <button class="button button__secondary">Заказать</button>
-                    </form>
-
+            <div class="response">
+                <p class="response_title">Заявка отправлена </p>
+                <p>Спасибо за вашу заявку, наши менеджеры в скором времени с вами свяжуться</p>
+                <div class="contacts_area">
+                    <ul class="contacts_list">
+                        <li><a href="tel:+380996661488">099 666 14 88</a></li>
+                        <li><a href="tel:+380996661488">099 666 14 88</a></li>
+                    </ul>
+                    <ul class="social_list">
+                        <li><img src="assets/img/svg/tg.svg" alt=""></li>
+                        <li><img src="assets/img/svg/insta.svg" alt=""></li>
+                        <li><img src="assets/img/svg/fb.svg" alt=""></li>
+                    </ul>
+                    <a href="mailto:luxury_agency@gmail.com" class="contacts_mail">
+                    manager@girlschase.com.ua
+                </a>
                 </div>
             </div>
         </div>
-
     </section>
     <!-- / feedback -->
     <!-- faq -->
@@ -463,49 +485,69 @@
 
                 <div class="faq_item">
                     <div class="faq_question" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Могу ли я работать в Вашем агентстве, если мне ещё нет 18 лет? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        <div class="faq_item__header">
+                            Могу ли я работать в Вашем агентстве, если мне ещё нет 18 лет? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        </div>
                     </div>
                     <div id="collapseOne" class="collapse show faq_answer" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        К сожалению мы предлагаем работу только совершеннолетним девушкам, напишите нам когда вам исполниться 18 лет.
+                        <div class="faq_item__description">
+                            К сожалению мы предлагаем работу только совершеннолетним девушкам, напишите нам когда вам исполниться 18 лет.
+                        </div>
                     </div>
                 </div>
 
                 <div class="faq_item">
                     <div class="collapsed faq_question" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Я переживаю за свою безопасномть и конфиденциальность.
+                        <div class="faq_item__header">
+                            Я переживаю за свою безопасномть и конфиденциальность.
+                        </div>
                         <img src="assets/img/svg/arrow-up.svg" alt="">
                     </div>
                     <div id="collapseTwo" class="collapse faq_answer" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        За тем, чтобы с вами не случилось ничего плохого, будет наблюдать служба безопасности. Мы не разглашает контактные данные и фото из присланных соискателями резюме. Мы ответственно подходим к своей работе и дорожим репутацией, поэтому Вы можете быть уверены
-                        в полной конфиденциальности.
+                        <div class="faq_item__description">
+                            За тем, чтобы с вами не случилось ничего плохого, будет наблюдать служба безопасности. Мы не разглашает контактные данные и фото из присланных соискателями резюме. Мы ответственно подходим к своей работе и дорожим репутацией, поэтому Вы можете быть уверены
+                            в полной конфиденциальности.
+                        </div>
                     </div>
                 </div>
 
                 <div class="faq_item">
                     <div class="collapsed faq_question" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Я не подхожу про параметрам форм и роста, моги ли я работать? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        <div class="faq_item__header">
+                            Я не подхожу про параметрам форм и роста, моги ли я работать? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        </div>
                     </div>
                     <div id="collapseThree" class="collapse faq_answer" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        Это не проблема. Пожелания и вкусы у заказчиков разные, кому-то нравятся миниатюрные, кому-то рослые, некоторые предпочитают худых, другие – девушек в теле.
+                        <div class="faq_item__description">
+                            Это не проблема. Пожелания и вкусы у заказчиков разные, кому-то нравятся миниатюрные, кому-то рослые, некоторые предпочитают худых, другие – девушек в теле.
+                        </div>
                     </div>
                 </div>
 
                 <div class="faq_item">
                     <div class="collapsed faq_question" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        На какой зароботок мне расчитывать? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        <div class="faq_item__header">
+                            На какой зароботок мне расчитывать? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        </div>
                     </div>
                     <div id="collapseFour" class="collapse faq_answer" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        Заработок напрямую зависит от вашего умения стать пределом мечтаний своего попутчика. Привлекательность и дар очарования — главные достоинства успешных представительниц нашего агентства. Средний доход моделей 400-800$ в день. Дополнительные услуги оплачиваются
-                        клиентами отдельно. Часто эти «чаевые» удваивают сумму основного дневного заработка. Поэтому для нас особенно важно желание девушки трудиться по высоким тарифам.
+                        <div class="faq_item__description">
+                            Заработок напрямую зависит от вашего умения стать пределом мечтаний своего попутчика. Привлекательность и дар очарования — главные достоинства успешных представительниц нашего агентства. Средний доход моделей 400-800$ в день. Дополнительные услуги оплачиваются
+                            клиентами отдельно. Часто эти «чаевые» удваивают сумму основного дневного заработка. Поэтому для нас особенно важно желание девушки трудиться по высоким тарифам.
+                        </div>
                     </div>
                 </div>
 
                 <div class="faq_item">
                     <div class="collapsed faq_question" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Смогу ли я совмещать работу со своей учебой/другой работой? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        <div class="faq_item__header">
+                            Смогу ли я совмещать работу со своей учебой/другой работой? <img src="assets/img/svg/arrow-up.svg" alt="">
+                        </div>
                     </div>
                     <div id="collapseFive" class="collapse faq_answer" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        График вы составляете себе сами, все будет зависеть только от вас. Но помните что доход будет зависеть от количества проработанных часов.
+                        <div class="faq_item__description">
+                            График вы составляете себе сами, все будет зависеть только от вас. Но помните что доход будет зависеть от количества проработанных часов.
+                        </div>
                     </div>
                 </div>
 

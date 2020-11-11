@@ -33,4 +33,12 @@ $(document).ready(function() {
 
     });
 
+    $('#form_request_button1').click(() => {
+        $('.section_feedback_inner').hide();
+        $('.response').addClass('active');
+        // console.log("sdjbk")
+        // return false;
+
+    });
+
 });
