@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+* {
+  box-sizing: border-box; }
+
+.body {
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px; }
+  .body p {
+    font-weight: bold; }
+  .body a,
+  .body a:hover {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #fff; }
+  .body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .body .button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-family: 'Yeseva One', cursive;
+    text-align: center;
+    border: 2px solid #FFCC63;
+    padding: 4px 22px;
+    border-radius: 5px;
+    font-size: 24px; }
+    .body .button__primary {
+      color: #fff; }
+    .body .button__secondary {
+      background-color: rgba(0, 0, 0, 0);
+      font-family: 'Inter', sans-serif;
+      color: #FFCC63; }
+  .body .container {
+    max-width: 1024px;
+    padding-left: 30px;
+    padding-right: 30px; }
+  .body .brand_label {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    color: #FFCC63; }
+  .body .section_title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px; }
+  .body .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0; }
+  .body .swiper-pagination-bullet {
+    border: 1px solid #fff;
+    opacity: 1; }
+  .body .swiper-pagination-bullet-active {
+    background-color: #fff; }
+  .body.menu_active {
+    overflow: hidden; }
+    .body.menu_active .menu_button {
+      justify-content: center; }
+      .body.menu_active .menu_button .button_item__outer {
+        opacity: 0; }
+      .body.menu_active .menu_button .button_item__middle {
+        transform: rotate(45deg); }
+        .body.menu_active .menu_button .button_item__middle::after {
+          transform: rotate(-90deg); }
+    .body.menu_active .menu {
+      opacity: 1;
+      visibility: visible; }
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.header {
+  padding: 28px 0; }
+  .header .menu_button {
+    position: relative;
+    z-index: 11;
+    margin-top: 6px;
+    width: 27px;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .header .menu_button .button_item {
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #FFCC63;
+      transition: .3s; }
+      .header .menu_button .button_item__middle {
+        position: relative; }
+        .header .menu_button .button_item__middle::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #FFCC63;
+          transition: .3s; }
+  .header .phone_numbers a {
+    white-space: nowrap;
+    font-size: 16px; }
+  .header .menu {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s; }
+    .header .menu .menu_list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 0; }
+      .header .menu .menu_list li + li {
+        margin-top: 10px; }
+      .header .menu .menu_list a {
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 0.02em;
+        color: #FFCC63; }
+    .header .menu .contacts_area {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .header .menu .contacts_area .contacts_list a {
+        font-family: 'Yeseva One', cursive;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF; }
+      .header .menu .contacts_area .social_list {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        display: flex; }
+        .header .menu .contacts_area .social_list li + li {
+          margin-left: 15px; }
+      .header .menu .contacts_area .contacts_mail {
+        font-weight: 600;
+        font-size: 14px;
+        color: #FFCC63; }
+
+.section_intro {
+  position: relative;
+  background: url(../img/intro-mobile.jpg) no-repeat 50% 50%;
+  background-size: cover; }
+  .section_intro::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  .section_intro .intro_text {
+    position: relative;
+    z-index: 1;
+    font-family: 'Yeseva One', cursive; }
+  .section_intro .intro_button {
+    margin-top: 50px; }
+    .section_intro .intro_button .button {
+      width: 100%; }
+
+.section_promo .text_top {
+  font-size: 24px; }
+  .section_promo .text_top span {
+    color: #FFCC63; }
+
+.section_promo .promo_image {
+  margin-top: 34px;
+  background: url(../img/promo-mobile.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  text-align: center;
+  font-family: 'Yeseva One', cursive;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #FFCC63;
+  padding: 60px 0;
+  letter-spacing: 1px; }
+
+.section_requirements ul li + li {
+  margin-top: 20px; }
+
+.section_requirements ul li {
+  font-weight: 600;
+  color: #FFFFFF;
+  background: url(../img/svg/check-marker.svg) no-repeat 0 6px;
+  line-height: 2;
+  padding-left: 40px; }
+
+.section_vacancies .section_title {
+  margin-bottom: 0; }
+
+.section_vacancies .vacancies_item {
+  padding: 15px;
+  background-color: #fff; }
+  .section_vacancies .vacancies_item .vacancies_title {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000; }
+  .section_vacancies .vacancies_item .vacancies_subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #515151; }
+  .section_vacancies .vacancies_item .vacancies_description {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000000;
+    min-height: 75px; }
+  .section_vacancies .vacancies_item .button {
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%; }
+
+.section_vacancies .swiper-slide {
+  transition: .3s;
+  width: 220px;
+  margin: 60px 20px 80px;
+  position: relative;
+  transition: .3s; }
+  .section_vacancies .swiper-slide::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .3s; }
+
+.section_vacancies .swiper-slide-active {
+  transform: scale(1.05); }
+  .section_vacancies .swiper-slide-active::after {
+    background-color: rgba(0, 0, 0, 0); }
+
+.section_gallery .image_wrap + .image_wrap {
+  margin-left: 10px; }
+
+.section_gallery .image_wrap img {
+  width: 100%; }
+
+.section_advantages .advantages_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .section_advantages .advantages_item .advantages_icon {
+    margin-bottom: 50px; }
+    .section_advantages .advantages_item .advantages_icon img {
+      height: 150px; }
+  .section_advantages .advantages_item .advantages_title {
+    font-weight: 300;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 30px; }
+  .section_advantages .advantages_item .advantages_description {
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF; }
+
+.section_advantages .swiper-slide {
+  padding: 0 20px;
+  margin-bottom: 50px; }
+
+.section_feedback .form_title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #757575; }
+  .section_feedback .form_title.active {
+    color: #FFFFFF; }
+
+.section_feedback .nav {
+  margin-bottom: 50px; }
+
+.section_feedback form {
+  display: flex;
+  flex-direction: column; }
+  .section_feedback form .input_title {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #757575; }
+  .section_feedback form input {
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    padding: 7px; }
+  .section_feedback form [type=radio] {
+    display: none; }
+  .section_feedback form [type=radio]:checked + label .check_area {
+    background: url(../img/svg/radio-checked.svg) no-repeat 50% 50%;
+    background-size: cover; }
+  .section_feedback form .radio_wrap {
+    margin-bottom: 15px; }
+  .section_feedback form label {
+    display: flex; }
+  .section_feedback form .check_area {
+    display: inline-block;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFCC63; }
+  .section_feedback form span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #C4C4C4; }
+  .section_feedback form button {
+    margin-top: 25px;
+    border: none;
+    outline: none; }
+
+.section_faq .faq_item {
+  border-bottom: 1px solid #757575;
+  font-size: 14px; }
+  .section_faq .faq_item .faq_question {
+    font-weight: bold;
+    padding: 20px 40px 20px 20px;
+    position: relative; }
+    .section_faq .faq_item .faq_question img {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      transform: rotateX(180deg);
+      transition: .3s; }
+    .section_faq .faq_item .faq_question.collapsed img {
+      transform: rotate(0deg); }
+  .section_faq .faq_item .faq_answer {
+    padding: 0 20px 20px 18px; }
+
+.section_footer .social_list {
+  margin-top: 40px;
+  display: flex;
+  padding: 0; }
+  .section_footer .social_list li + li {
+    margin-left: 15px; }
+
+.section_footer .contacts_wrap {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .section_footer .contacts_wrap .contacts_title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFCC63; }
+  .section_footer .contacts_wrap .contacts_list {
+    padding: 0; }
+    .section_footer .contacts_wrap .contacts_list li {
+      line-height: 1; }
+    .section_footer .contacts_wrap .contacts_list a {
+      font-size: 13px;
+      color: #FFCC63; }
+
+.section_footer .contacts_mail {
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFCC63; }

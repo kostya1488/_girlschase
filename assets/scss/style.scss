@@ -1,0 +1,533 @@
+// --- fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+// font-family: 'Inter', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+// font-family: 'Yeseva One', cursive;
+// === / fonts
+// --- mixins
+// === / mixins
+// --- variables
+$screen_xs_max: 575.98px;
+$screen_sm_max: 767.98px;
+$screen_md_max: 991.98px;
+$screen_lg_max: 1199.98px;
+$screen_xl_max: 1399.98px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+$screen_xxl: 1400px;
+// ---
+$color_primary: #FFCC63;
+// === / variables
+// --- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    background: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    p {
+        font-weight: bold;
+    }
+    a,
+    a:hover {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .button {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        font-family: 'Yeseva One', cursive;
+        text-align: center;
+        border: 2px solid $color_primary;
+        padding: 4px 22px;
+        border-radius: 5px;
+        font-size: 24px;
+        &__primary {
+            color: #fff;
+        }
+        &__secondary {
+            background-color: rgba($color: #000000, $alpha: 0);
+            font-family: 'Inter', sans-serif;
+            color: $color_primary;
+        }
+    }
+    .container {
+        max-width: 1024px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .brand_label {
+        font-family: 'Yeseva One', cursive;
+        font-weight: normal;
+        color: $color_primary;
+    }
+    .section_title {
+        font-family: 'Yeseva One', cursive;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 0;
+    }
+    .swiper-pagination-bullet {
+        border: 1px solid #fff;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+    &.menu_active {
+        overflow: hidden;
+        .menu_button {
+            justify-content: center;
+            .button_item {
+                &__outer {
+                    opacity: 0;
+                }
+                &__middle {
+                    transform: rotate(45deg);
+                    &::after {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+        .menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+// === / commons
+// --- header
+.header {
+    padding: 28px 0;
+    .menu_button {
+        position: relative;
+        z-index: 11;
+        margin-top: 6px;
+        width: 27px;
+        height: 14px;
+        // margin-right: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .button_item {
+            width: 100%;
+            height: 2px;
+            border-radius: 2px;
+            background-color: $color_primary;
+            transition: .3s;
+            &__middle {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color_primary;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+    .phone_numbers a {
+        white-space: nowrap;
+        font-size: 16px;
+    }
+    .menu {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        .menu_list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 0;
+            li+li {
+                margin-top: 10px;
+            }
+            a {
+                font-weight: bold;
+                font-size: 24px;
+                letter-spacing: 0.02em;
+                color: #FFCC63;
+            }
+        }
+        .contacts_area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .contacts_list a {
+                font-family: 'Yeseva One', cursive;
+                font-size: 14px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+            }
+            .social_list {
+                margin-top: 30px;
+                margin-bottom: 15px;
+                display: flex;
+                li+li {
+                    margin-left: 15px;
+                }
+            }
+            .contacts_mail {
+                font-weight: 600;
+                font-size: 14px;
+                color: #FFCC63;
+            }
+        }
+    }
+}
+
+// === / header
+// --- section_intro
+.section_intro {
+    position: relative;
+    background: url(../img/intro-mobile.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: .5);
+    }
+    .intro_text {
+        position: relative;
+        z-index: 1;
+        font-family: 'Yeseva One', cursive;
+    }
+    .intro_button {
+        margin-top: 50px;
+        .button {
+            width: 100%;
+        }
+    }
+}
+
+// === / section_intro
+// --- section_promo
+.section_promo {
+    .text_top {
+        font-size: 24px;
+        span {
+            color: $color_primary;
+        }
+    }
+    .promo_image {
+        margin-top: 34px;
+        background: url(../img/promo-mobile.jpg) no-repeat 50% 50%;
+        background-size: cover;
+        text-align: center;
+        font-family: 'Yeseva One', cursive;
+        font-size: 24px;
+        color: rgba($color: #000000, $alpha: 0);
+        -webkit-text-stroke: 1px $color_primary;
+        padding: 60px 0;
+        letter-spacing: 1px;
+    }
+}
+
+// === / section_promo
+// --- section_requirements
+.section_requirements {
+    ul {
+        li+li {
+            margin-top: 20px;
+        }
+        li {
+            font-weight: 600;
+            color: #FFFFFF;
+            background: url(../img/svg/check-marker.svg) no-repeat 0 6px;
+            line-height: 2;
+            padding-left: 40px;
+        }
+    }
+}
+
+// === / section_requirements
+// --- section_about
+.section_about {}
+
+// === / section_about
+// --- section_vacancies
+.section_vacancies {
+    .section_title {
+        margin-bottom: 0;
+    }
+    .vacancies_item {
+        padding: 15px;
+        background-color: #fff;
+        .vacancies_title {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 18px;
+            color: #000000;
+        }
+        .vacancies_subtitle {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #515151;
+        }
+        .vacancies_description {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            color: #000000;
+            min-height: 75px;
+        }
+        .button {
+            margin-top: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+    }
+    .swiper-slide {
+        transition: .3s;
+        width: 220px;
+        margin: 60px 20px 80px;
+        position: relative;
+        transition: .3s;
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: .5);
+            transition: .3s;
+        }
+    }
+    .swiper-slide-active {
+        transform: scale(1.05);
+        &::after {
+            // z-index: 0;
+            background-color: rgba($color: #000000, $alpha: 0);
+        }
+    }
+}
+
+// === / section_vacancies
+// --- section_gallery
+.section_gallery {
+    .image_wrap+.image_wrap {
+        margin-left: 10px;
+    }
+    .image_wrap {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// === / section_gallery
+// --- section_feedback
+.section_feedback {}
+
+// === / section_feedback
+// --- section_promo_second
+.section_promo_second {}
+
+// === / section_promo_second
+// --- section_advantages
+.section_advantages {
+    .advantages_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .advantages_icon {
+            img {
+                height: 150px;
+            }
+            margin-bottom: 50px;
+        }
+        .advantages_title {
+            font-weight: 300;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+        .advantages_description {
+            font-weight: bold;
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+    }
+    .swiper-slide {
+        // width: 220px;
+        // margin-right: 20px;
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+}
+
+// === / section_advantages
+// --- section_feedback
+.section_feedback {
+    .form_title {
+        font-weight: bold;
+        font-size: 16px;
+        color: #757575;
+        &.active {
+            color: #FFFFFF;
+        }
+    }
+    .nav {
+        margin-bottom: 50px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        .input_title {
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #757575;
+        }
+        input {
+            margin-bottom: 15px;
+            border: 1px solid #fff;
+            background-color: #000;
+            color: #fff;
+            outline: none;
+            font-size: 16px;
+            padding: 7px;
+        }
+        [type=radio] {
+            display: none;
+        }
+        [type=radio]:checked+label {
+            .check_area {
+                background: url(../img/svg/radio-checked.svg) no-repeat 50% 50%;
+                background-size: cover;
+            }
+        }
+        .radio_wrap {
+            margin-bottom: 15px;
+        }
+        label {
+            display: flex;
+        }
+        .check_area {
+            display: inline-block;
+            margin-right: 20px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #FFCC63;
+        }
+        span {
+            font-weight: bold;
+            font-size: 18px;
+            color: #C4C4C4;
+        }
+        button {
+            margin-top: 25px;
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+// === / section_feedback
+// --- section_faq
+.section_faq {
+    .faq_item {
+        border-bottom: 1px solid #757575;
+        font-size: 14px;
+        .faq_question {
+            font-weight: bold;
+            padding: 20px 40px 20px 20px;
+            position: relative;
+            img {
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                transform: rotateX(180deg);
+                transition: .3s;
+            }
+            &.collapsed img {
+                transform: rotate(0deg);
+            }
+        }
+        .faq_answer {
+            padding: 0 20px 20px 18px;
+        }
+    }
+}
+
+// === / section_faq
+// --- section_footer
+.section_footer {
+    .social_list {
+        margin-top: 40px;
+        display: flex;
+        padding: 0;
+        li+li {
+            margin-left: 15px;
+        }
+    }
+    .contacts_wrap {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .contacts_title {
+            font-weight: bold;
+            font-size: 14px;
+            color: #FFCC63;
+        }
+        .contacts_list {
+            padding: 0;
+            li {
+                line-height: 1;
+            }
+            a {
+                font-size: 13px;
+                color: #FFCC63;
+            }
+        }
+    }
+    .contacts_mail {
+        font-weight: 600;
+        font-size: 14px;
+        color: #FFCC63;
+    }
+}
+
+// === / section_footer
