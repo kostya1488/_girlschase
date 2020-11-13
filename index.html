@@ -11,34 +11,33 @@
     <!-- Bootstrap  CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
 </head>
 
 <body class="body">
     <!-- header -->
     <header id="header" class="header">
         <div class="container">
-            <div class="row ">
-                <div class="col-2">
+            <div class="row justify-content-sm-between align-items-sm-center">
+                <div class="col-2 d-sm-none">
                     <div class="menu_button">
                         <div class="button_item button_item__outer"></div>
                         <div class="button_item button_item__middle"></div>
                         <div class="button_item button_item__outer"></div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col col-sm-auto">
                     <div class="brand_label">
                         Girls Chase
                     </div>
                 </div>
-                <div class="menu">
+                <div class="menu col-sm-auto col-lg-8 ">
                     <ul class="menu_list">
                         <li><a href="#about" class="nav_link">О нас</a></li>
                         <li><a href="#vacancies" class="nav_link">Вакансии</a></li>
                         <li><a href="#feedback" class="nav_link">Анкета</a></li>
                         <li><a href="#contacts" class="nav_link">Контакты</a></li>
                     </ul>
-                    <div class="contacts_area">
+                    <div class="contacts_area d-sm-none">
                         <ul class="contacts_list">
                             <li><a href="tel:+380996661488">099 666 14 88</a></li>
                             <li><a href="tel:+380996661488">099 666 14 88</a></li>
@@ -53,20 +52,19 @@
                         </a>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="phone_numbers text-right">
+                <div class="col phone_numbers_wrap">
+                    <div class="phone_numbers mt-lg-4 text-right">
                         <a href="tel:+380996661488">(099)666 14 88</a><br>
                         <a href="tel:+380996661488">(099)666 14 88</a>
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
     <!-- header -->
     <!-- intro -->
     <section id="intro" class="section_intro">
-        <div class="container">
+        <div class="container d-sm-none">
             <div class="row">
                 <div class="intro_text">
                     С нами ты сможешь позволить себе больше
@@ -76,21 +74,72 @@
                 </div>
             </div>
         </div>
+        <!-- Swiper -->
+        <div class="swiper-intro d-none d-sm-block">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/img/slider/slider-1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/slider/slider-2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/slider/slider-3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/slider/slider-4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/slider/slider-5.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/slider/slider-6.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <!-- -------------- -->
+            <div class="intro_text">
+                <div class="container position-relative">
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="brand_label">
+                        Girls Chase
+                    </div>
+                    <p>
+                        С нами ты сможешь позволить себе больше
+                    </p>
+                    <div class="intro_button text-right">
+                        <a href="#feedback" class="button button__primary">
+        Заполнить анкету
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- / intro -->
+
     <!-- promo -->
     <section id="promo" class="section_promo">
         <div class="container">
-            <div class="row">
-                <p class="text_top">
-                    Станьте частью <span>Girls Chase</span> и привыкайте к роскоши.
-                </p>
-                <p class="text_bot">
-                    70% процентов девушек в нашем агенстве, работают с нами больше 2 лет и знают что такое богатая жизнь.
-                </p>
+            <div class="row overflow-hidden">
+                <div class="col-sm-6 text_box pr-xl-3">
+                    <p class="text_top">
+                        Станьте частью <span>Girls Chase</span> и привыкайте к роскоши.
+                    </p>
+                    <p class="text_bot">
+                        70% процентов девушек в нашем агенстве, работают с нами больше 2 лет и знают что такое богатая жизнь.
+                    </p>
+                    <img src="assets/img/promo2-desktop.jpg" alt="" class="d-none d-sm-inline w-75">
+                </div>
+                <div class="col-sm-6 image_wrap d-none d-sm-block">
+                    <img src="assets/img/promo-desktop.jpg" alt="" class="">
+                </div>
             </div>
         </div>
-        <img src="assets/img/promo-mobile.jpg" alt="" class="w-100 mt-5">
+        <img src="assets/img/promo-mobile.jpg" alt="" class="w-100 mt-5 d-sm-none">
     </section>
     <!-- / promo -->
 
@@ -107,36 +156,36 @@
                     <li>Возраст oт 18 лет.</li>
                     <li>Приветливая и улыбчивая</li>
                     <li>Акуратная, следит за собой</li>
-                    <li>Ответственность и профессиональность</li>
+                    <li class="mt-sm-0">Ответственность и профессиональность</li>
                     <li>Умеет поддержать разговор и слушать собеседника</li>
                 </ul>
             </div>
         </div>
     </section>
     <!-- / requirements -->
-
     <!-- about -->
     <section id="about" class="section_about">
         <div class="container">
             <div class="row">
-                <div class="section_title">
-                    О нас
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
+                <div class="col-sm-6 pr-xl-5">
+                    <div class="section_title">
+                        О нас
+                    </div>
                     <p class="m-0">
                         Мы не ищем идеальных девушек с обложек. Клиентов у нас всегда много и вкусы у них разные. Нам важны все типажи. Это работа, а не моделинг, это нужно понимать ведь для нас важно что бы вы чувствовали себя комфортно и получали удовольствие от своей работы.
                     </p>
                 </div>
+                <div class="col-sm-6 d-none d-sm-block">
+                    <img src="assets/img/about-desktop.jpg" alt="" class="h-100">
+                </div>
             </div>
         </div>
-        <img src="assets/img/about-mobile.jpg" alt="" class="mt-5 w-100">
+        <img src="assets/img/about-mobile.jpg" alt="" class="mt-5 w-100 d-sm-none">
     </section>
     <!-- / about -->
     <!-- vacancies -->
     <section id="vacancies" class="section_vacancies">
-        <div class="container overflow-hidden position-relative">
+        <div class="container">
             <div class="row">
                 <div class="section_title">
                     Выберите себе вакансию
@@ -200,19 +249,21 @@
     <!-- gallery -->
     <section id="gallery" class="section_gallery">
 
-        <div class="d-flex">
+        <div class="d-flex justify-content-center">
             <div class="image_wrap">
-                <img src="assets/img/gallery/1-mobile.jpg" alt="">
+                <img src="assets/img/gallery/1-mobile.jpg" alt="" class="d-sm-none">
+                <img src="assets/img/gallery/1-desktop.jpg" alt="" class="d-none d-sm-inline">
             </div>
 
             <div class="image_wrap">
-                <img src="assets/img/gallery/2-mobile.jpg" alt="">
+                <img src="assets/img/gallery/2-mobile.jpg" alt="" class="d-sm-none">
+                <img src="assets/img/gallery/2-desktop.jpg" alt="" class="d-none d-sm-inline">
             </div>
 
             <div class="image_wrap">
-                <img src="assets/img/gallery/3-mobile.jpg" alt="">
+                <img src="assets/img/gallery/3-mobile.jpg" alt="" class="d-sm-none">
+                <img src="assets/img/gallery/3-desktop.jpg" alt="" class="d-none d-sm-inline">
             </div>
-
         </div>
 
     </section>
@@ -222,17 +273,21 @@
     <section id="promo_second" class="section_promo_second">
         <div class="container">
             <div class="row">
-                <div class="section_title">
-                    Почему мы?
+                <div class="col-sm-6">
+                    <div class="section_title">
+                        Почему мы?
+                    </div>
+                    <p>
+                        За 12 лет на рынке мы выросли до огромных масшатабов, наши клиенты очень известные и влиятельные люди.И поетому мы можем себе позволить предлагать своим девушкам только самое лучшее.
+                    </p>
+                </div>
+                <div class="col-sm-6 d-none d-sm-block">
+                    <img src="assets/img/promo_second-tablet.jpg" alt="" class="d-xl-none">
+                    <img src="assets/img/promo_second-desktop.jpg" alt="" class="d-none d-xl-inline">
                 </div>
             </div>
-            <div class="row">
-                <p>
-                    За 12 лет на рынке мы выросли до огромных масшатабов, наши клиенты очень известные и влиятельные люди.И поетому мы можем себе позволить предлагать своим девушкам только самое лучшее.
-                </p>
-            </div>
         </div>
-        <img src="assets/img/promo_second-mobile.jpg" alt="" class="w-100">
+        <img src="assets/img/promo_second-mobile.jpg" alt="" class="w-100 d-sm-none">
     </section>
     <!-- / promo_second -->
     <!-- advantages -->
@@ -244,131 +299,133 @@
                 </div>
             </div>
         </div>
-        <div class="overflow-hidden position-relative">
+        <div class="container p-0">
+            <div class="overflow-hidden position-relative">
 
-            <!-- Swiper -->
-            <div class="swiper-advantages">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/cash.svg" alt="">
+                <!-- Swiper -->
+                <div class="swiper-advantages">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/cash.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Стабильный зароботок
+                                </div>
+                                <div class="advantages_description">
+                                    У нас в агентсве ежедневные выплаты, вы можете не переживать что за вашу работу не заплатят или задержат
+                                </div>
                             </div>
-                            <div class="advantages_title">
-                                Стабильный зароботок
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/sesurity.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Безопасность
+                                </div>
+                                <div class="advantages_description">
+                                    Мы понимаем насколько важно для любой девушки что бы она чувствовала себя в безопасностии мы вам ее гарантируем.
+                                </div>
                             </div>
-                            <div class="advantages_description">
-                                У нас в агентсве ежедневные выплаты, вы можете не переживать что за вашу работу не заплатят или задержат
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/home.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Предоставление жилья
+                                </div>
+                                <div class="advantages_description">
+                                    Если у вас нет жилья в городе, что то случилось или вы просто не отсюда , не переживайте, мы подберем для вас прекрасное место жительства
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/confidentiality.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Конфиденциальность
+                                </div>
+                                <div class="advantages_description">
+                                    Мы осознаем что из за стандартов общества наша работа кажется табу. И если вы захотите, что бы об этом никто не знал мы вам это предоставим.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/photo.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Услуги фотографа, стилиста, визажиста
+                                </div>
+                                <div class="advantages_description">
+                                    В наших интересах что бы вы были красивы и ухожены, ведь это дает намного больше уверености вам, а ваша увереность самое главное для нас.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/clock.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Свободный график
+                                </div>
+                                <div class="advantages_description">
+                                    Вы можете не переживать о своей учебе, другой работе, личной жизни. Наши девушки очень ловко совмещают все свои занятия с работой.Все будет зависить только от вас
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-0">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/message.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Знакомства
+                                </div>
+                                <div class="advantages_description">
+                                    Не стоит забывать что это не только работа с хорошим зароботком, но и связи. Наши клиенты это известные люди из мира шоубизнеса, политики, иностранные бизнесмены и украинская елита.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-0">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/dollar.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Берем расходы на себя
+                                </div>
+                                <div class="advantages_description">
+                                    Мы полностью покрываем ваше проживание, питание у нас. Так же заплатим за ваше образование и расходы на уход за собой.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-0">
+                            <div class="advantages_item">
+                                <div class="advantages_icon">
+                                    <img src="assets/img/svg/shoe.svg" alt="">
+                                </div>
+                                <div class="advantages_title">
+                                    Колектив
+                                </div>
+                                <div class="advantages_description">
+                                    Конечно же самым большим нашим преймуществом являются наши леди. Это красивые, умные, сильные, уважающие себя девушки. В таком колективе вы сможете найти хороших подруг и расцвести как женщина.
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/sesurity.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Безопасность
-                            </div>
-                            <div class="advantages_description">
-                                Мы понимаем насколько важно для любой девушки что бы она чувствовала себя в безопасностии мы вам ее гарантируем.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/home.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Предоставление жилья
-                            </div>
-                            <div class="advantages_description">
-                                Если у вас нет жилья в городе, что то случилось или вы просто не отсюда , не переживайте, мы подберем для вас прекрасное место жительства
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/confidentiality.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Конфиденциальность
-                            </div>
-                            <div class="advantages_description">
-                                Мы осознаем что из за стандартов общества наша работа кажется табу. И если вы захотите, что бы об этом никто не знал мы вам это предоставим.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/photo.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Услуги фотографа, стилиста, визажиста
-                            </div>
-                            <div class="advantages_description">
-                                В наших интересах что бы вы были красивы и ухожены, ведь это дает намного больше уверености вам, а ваша увереность самое главное для нас.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/clock.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Свободный график
-                            </div>
-                            <div class="advantages_description">
-                                Вы можете не переживать о своей учебе, другой работе, личной жизни. Наши девушки очень ловко совмещают все свои занятия с работой.Все будет зависить только от вас
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/message.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Знакомства
-                            </div>
-                            <div class="advantages_description">
-                                Не стоит забывать что это не только работа с хорошим зароботком, но и связи. Наши клиенты это известные люди из мира шоубизнеса, политики, иностранные бизнесмены и украинская елита.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/dollar.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Берем расходы на себя
-                            </div>
-                            <div class="advantages_description">
-                                Мы полностью покрываем ваше проживание, питание у нас. Так же заплатим за ваше образование и расходы на уход за собой.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantages_item">
-                            <div class="advantages_icon">
-                                <img src="assets/img/svg/shoe.svg" alt="">
-                            </div>
-                            <div class="advantages_title">
-                                Колектив
-                            </div>
-                            <div class="advantages_description">
-                                Конечно же самым большим нашим преймуществом являются наши леди. Это красивые, умные, сильные, уважающие себя девушки. В таком колективе вы сможете найти хороших подруг и расцвести как женщина.
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -376,103 +433,106 @@
     <!-- feedback -->
     <section id="feedback" class="section_feedback position-relative">
         <div class="container">
-            <div class="section_feedback_inner">
-                <div class="row">
-                    <div class="section_title">
-                        Заполнить анкету
+            <div class="section_feedback_outer col-sm-10">
+                <div class="section_feedback_inner col-sm-9 pr-xl-5">
+                    <img src="assets/img/feedback.jpg" alt="" class="d-none d-sm-inline">
+                    <div class="row">
+                        <div class="section_title">
+                            Заполнить анкету
+                        </div>
+                    </div>
+
+                    <nav>
+                        <div class="nav" id="nav-tab" role="tablist">
+                            <a class="col-6 form_title active" id="nav-feedback-tab" data-toggle="tab" href="#nav-feedback" role="tab" aria-controls="nav-feedback" aria-selected="true">
+                            Заполнить анкету
+                        </a>
+                            <a class="col-6 form_title text-right" id="nav-callback-tab" data-toggle="tab" href="#nav-callback" role="tab" aria-controls="nav-callback" aria-selected="false">
+                            Заказать звонок
+                        </a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-feedback" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                            <form action="" class="feedback_form">
+                                <div class="input_title">
+                                    Имя
+                                </div>
+                                <input type="text">
+                                <div class="input_title">
+                                    Телефон
+                                </div>
+                                <input type="text">
+                                <div class="input_title">
+                                    Instagram
+                                </div>
+                                <input type="text">
+                                <div class="input_title mb-4">
+                                    Есть ли у вас опыт в эскорте?
+                                </div>
+                                <div class="radio_wrap">
+                                    <input type="radio" name="age" id="age_yes">
+                                    <label for="age_yes">
+                                    <div class="check_area"></div>
+                                    <span>Да</span>
+                                </label>
+                                </div>
+                                <div class="radio_wrap">
+                                    <input type="radio" name="age" id="age_no" checked>
+                                    <label for="age_no">
+                                    <div class="check_area"></div>
+                                    <span>Нет</span>
+                                </label>
+                                </div>
+                                <div class="input_title">
+                                    Сколько вам лет?
+                                </div>
+                                <input type="text">
+                                <div class="button_wrap">
+                                    <button id="form_request_button1" class="button button__secondary">Отправить анкету</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-callback" role="tabpanel" aria-labelledby="nav-callback-tab">
+
+                            <form action="">
+                                <div class="input_title">
+                                    Имя
+                                </div>
+                                <input type="text">
+                                <div class="input_title">
+                                    Телефон
+                                </div>
+                                <input type="text">
+                                <div class="button_wrap">
+                                    <button id="form_request_button2" class="button button__secondary">Заказать</button>
+                                </div>
+                            </form>
+
+                        </div>
                     </div>
                 </div>
+                <div class="response">
+                    <p class="response_title">Заявка отправлена </p>
+                    <p>Спасибо за вашу заявку, наши менеджеры в скором времени с вами свяжуться</p>
+                    <div class="contacts_area">
+                        <ul class="contacts_list">
+                            <li><a href="tel:+380996661488">099 666 14 88</a></li>
+                            <li><a href="tel:+380996661488">099 666 14 88</a></li>
+                        </ul>
+                        <ul class="social_list">
+                            <li><img src="assets/img/svg/tg.svg" alt=""></li>
+                            <li><img src="assets/img/svg/insta.svg" alt=""></li>
+                            <li><img src="assets/img/svg/fb.svg" alt=""></li>
+                        </ul>
 
-                <nav>
-                    <div class="nav" id="nav-tab" role="tablist">
-                        <a class="col-6 form_title active" id="nav-feedback-tab" data-toggle="tab" href="#nav-feedback" role="tab" aria-controls="nav-feedback" aria-selected="true">
-                        Заполнить анкету
-                    </a>
-                        <a class="col-6 form_title text-right" id="nav-callback-tab" data-toggle="tab" href="#nav-callback" role="tab" aria-controls="nav-callback" aria-selected="false">
-                        Заказать звонок
-                    </a>
-                    </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-feedback" role="tabpanel" aria-labelledby="nav-home-tab">
-
-                        <form action="" class="feedback_form">
-                            <div class="input_title">
-                                Имя
-                            </div>
-                            <input type="text">
-                            <div class="input_title">
-                                Телефон
-                            </div>
-                            <!-- <input type="text">
-                        <div class="input_title">
-                            E-mail
-                        </div> -->
-                            <input type="text">
-                            <div class="input_title">
-                                Instagram
-                            </div>
-                            <input type="text">
-                            <div class="input_title">
-                                Есть ли у вас опыт в эскорте?
-                            </div>
-                            <div class="radio_wrap">
-                                <input type="radio" name="age" id="age_yes">
-                                <label for="age_yes">
-                                <div class="check_area"></div>
-                                <span>Да</span>
-                            </label>
-                            </div>
-                            <div class="radio_wrap">
-                                <input type="radio" name="age" id="age_no" checked>
-                                <label for="age_no">
-                                <div class="check_area"></div>
-                                <span>Нет</span>
-                            </label>
-                            </div>
-                            <div class="input_title">
-                                Сколько вам лет?
-                            </div>
-                            <input type="text">
-                            <button id="form_request_button1" class="button button__secondary">Отправить анкету</button>
-                        </form>
+                        <a href="mailto:luxury_agency@gmail.com" class="contacts_mail">
+                                manager@girlschase.com.ua
+                            </a>
 
                     </div>
-                    <div class="tab-pane fade" id="nav-callback" role="tabpanel" aria-labelledby="nav-callback-tab">
-
-                        <form action="">
-                            <div class="input_title">
-                                Имя
-                            </div>
-                            <input type="text">
-                            <div class="input_title">
-                                Телефон
-                            </div>
-                            <input type="text">
-
-                            <button id="form_request_button2" class="button button__secondary">Заказать</button>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="response">
-                <p class="response_title">Заявка отправлена </p>
-                <p>Спасибо за вашу заявку, наши менеджеры в скором времени с вами свяжуться</p>
-                <div class="contacts_area">
-                    <ul class="contacts_list">
-                        <li><a href="tel:+380996661488">099 666 14 88</a></li>
-                        <li><a href="tel:+380996661488">099 666 14 88</a></li>
-                    </ul>
-                    <ul class="social_list">
-                        <li><img src="assets/img/svg/tg.svg" alt=""></li>
-                        <li><img src="assets/img/svg/insta.svg" alt=""></li>
-                        <li><img src="assets/img/svg/fb.svg" alt=""></li>
-                    </ul>
-                    <a href="mailto:luxury_agency@gmail.com" class="contacts_mail">
-                    manager@girlschase.com.ua
-                </a>
                 </div>
             </div>
         </div>
@@ -481,6 +541,11 @@
     <!-- faq -->
     <section id="faq" class="section_faq">
         <div class="container">
+            <div class="row">
+                <div class="section_title">
+                    Популярные вопросы
+                </div>
+            </div>
             <div class="accordion" id="accordionExample">
 
                 <div class="faq_item">
@@ -559,7 +624,7 @@
     <section id="contacts" class="section_footer">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-6 col-sm-4">
                     <div class="brand_label">
                         Girls Chase
                     </div>
@@ -569,7 +634,7 @@
                         <li><img src="assets/img/svg/fb.svg" alt=""></li>
                     </ul>
                 </div>
-                <div class="col-6 contacts_wrap">
+                <div class="col-6 col-sm-4 contacts_wrap order-sm-1">
                     <div class="contacts_title">
                         Телефоны:
                     </div>
@@ -579,7 +644,13 @@
                         <li><a href="tel:+380996661488">099 666 14 88</a></li>
                     </ul>
                 </div>
-                <div class="col text-center mt-4">
+                <div class="col col-sm-4 text-center mt-4 mt-sm-0 order-sm-0">
+                    <ul class="menu_list d-none d-sm-flex">
+                        <li><a href="#about" class="nav_link">О нас</a></li>
+                        <li><a href="#vacancies" class="nav_link">Вакансии</a></li>
+                        <li class="text-right"><a href="#feedback" class="nav_link">Анкета</a></li>
+                        <li class="text-right"><a href="#contacts" class="nav_link">Контакты</a></li>
+                    </ul>
                     <a href="mailto:luxury_agency@gmail.com" class="contacts_mail">
                         manager@girlschase.com.ua
                     </a>
@@ -598,27 +669,7 @@
 
     <script src="js/ajax.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-vacancies', {
-            slidesPerView: 'auto',
-            initialSlide: 1,
-            centeredSlides: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            }
-        });
-        var swiper = new Swiper('.swiper-advantages', {
-            slidesPerView: 1,
-            centeredSlides: true,
-
-            pagination: {
-                el: '.swiper-pagination',
-                // dynamicBullets: true,
-                clickable: true,
-            }
-        });
-    </script>
+    <script src="js/swiper.js"></script>
 </body>
 
 </html>
