@@ -615,18 +615,22 @@
       margin-top: 25px;
       border: none;
       outline: none; }
-  .section_feedback .response {
+  .section_feedback .response-ajax_callback,
+  .section_feedback .response-ajax_feedback {
     position: absolute;
     top: 40%;
     opacity: 0;
     visibility: hidden;
     transition: .3s; }
-    .section_feedback .response p {
+    .section_feedback .response-ajax_callback p,
+    .section_feedback .response-ajax_feedback p {
       text-align: center; }
-    .section_feedback .response p.response_title {
+    .section_feedback .response-ajax_callback p.response_title,
+    .section_feedback .response-ajax_feedback p.response_title {
       color: #FFCC63;
       font-size: 22px; }
-    .section_feedback .response.active {
+    .section_feedback .response-ajax_callback.active,
+    .section_feedback .response-ajax_feedback.active {
       margin-top: 100px;
       position: relative;
       opacity: 1;

@@ -1,3 +1,5 @@
 {
-    "cSpell.language": ",ru"
+    "cSpell.language": ",ru",
+    "cSpell.enabled": true,
+    "liveServer.settings.port": 5501
 }

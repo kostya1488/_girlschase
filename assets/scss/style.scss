@@ -851,7 +851,8 @@ section {
             outline: none;
         }
     }
-    .response {
+    .response-ajax_callback,
+    .response-ajax_feedback {
         position: absolute;
         top: 40%;
         opacity: 0;
