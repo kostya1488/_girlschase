@@ -16,10 +16,14 @@
     margin: 0;
     padding: 0;
     color: #fff; }
+  .body a.brand_label:hover {
+    color: #FFCC63; }
   .body ul {
     list-style: none;
     margin: 0;
     padding: 0; }
+  .body .color_brand {
+    color: #FFCC63; }
   .body .button {
     position: relative;
     z-index: 1;
@@ -41,6 +45,8 @@
       background-color: #FFCC63;
       color: #000;
       padding: 4px 22px; }
+  .body .social_list img {
+    width: 27px; }
   .body .container {
     max-width: 1024px; }
     @media (max-width: 575.98px) {
@@ -211,9 +217,16 @@
       .header .phone_numbers_wrap {
         position: absolute;
         right: 0;
-        top: 172px; }
+        top: 100px; }
+      .header .menu .menu_list li {
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
+        transition: .3s; }
+        .header .menu .menu_list li:hover {
+          border-color: #FFCC63; }
       .header .menu .menu_list li + li {
-        margin-left: 50px; } }
+        margin-left: 50px; }
+      .header .contacts_list {
+        width: 140px; } }
 
 .section_intro {
   overflow: hidden;
@@ -344,7 +357,7 @@
     .section_promo .image_wrap::after {
       content: "";
       position: absolute;
-      right: 0;
+      right: 12px;
       bottom: 0;
       width: 80%;
       height: 80%;
@@ -352,8 +365,8 @@
     .section_promo .image_wrap img {
       position: absolute;
       z-index: 1;
-      left: 0;
-      top: 0;
+      left: 6px;
+      top: 12px;
       width: 80%;
       height: 80%;
       object-fit: cover; } }
@@ -405,6 +418,8 @@
   overflow: hidden; }
   .section_about p {
     font-weight: bold; }
+    .section_about p span {
+      color: #FFCC63; }
   @media (min-width: 576px) {
     .section_about {
       font-size: 24px; } }
@@ -413,7 +428,7 @@
   overflow: hidden;
   position: relative; }
   .section_vacancies .vacancies_item {
-    padding: 15px;
+    padding: 35px 25px;
     background-color: #fff; }
     .section_vacancies .vacancies_item .vacancies_title {
       margin-top: 20px;
@@ -551,6 +566,8 @@
 
 .section_feedback {
   overflow: hidden; }
+  .section_feedback .section_title {
+    margin-bottom: 50px; }
   .section_feedback .form_title {
     font-weight: bold;
     font-size: 16px;
@@ -558,7 +575,7 @@
     .section_feedback .form_title.active {
       color: #FFFFFF; }
   .section_feedback .nav {
-    margin-bottom: 50px; }
+    margin-bottom: 30px; }
   .section_feedback form {
     display: flex;
     flex-direction: column; }
@@ -600,6 +617,7 @@
       outline: none; }
   .section_feedback .response {
     position: absolute;
+    top: 40%;
     opacity: 0;
     visibility: hidden;
     transition: .3s; }
@@ -609,6 +627,7 @@
       color: #FFCC63;
       font-size: 22px; }
     .section_feedback .response.active {
+      margin-top: 100px;
       position: relative;
       opacity: 1;
       visibility: visible; }
@@ -621,8 +640,8 @@
       padding: 50px 25px; }
     .section_feedback .section_feedback_inner {
       position: relative;
-      min-height: 806px; }
-      .section_feedback .section_feedback_inner img {
+      min-height: 660px; }
+      .section_feedback .section_feedback_inner img.feedback {
         position: absolute;
         left: 100%;
         margin-left: 25px;
@@ -640,7 +659,7 @@
       margin-bottom: 0px; } }
   @media (min-width: 1200px) {
     .section_feedback .section_feedback_inner {
-      min-height: 896px; }
+      min-height: 716px; }
     .section_feedback .form_title {
       font-size: 24px; }
     .section_feedback form .input_title {
@@ -665,6 +684,8 @@
       transition: .3s; }
     .section_faq .faq_item .faq_question.collapsed img {
       transform: rotate(0deg); }
+  .section_faq .faq_item .faq_answer {
+    font-weight: 300; }
 
 @media (min-width: 1200px) {
   .section_faq .faq_item {

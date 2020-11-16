@@ -1,8 +1,6 @@
 var swiper = new Swiper('.swiper-intro', {
-    // spaceBetween: 30,
     centeredSlides: true,
     loop: true,
-    // freeMode: true,
     speed: 1500,
     autoplay: {
         delay: 1500,
@@ -29,10 +27,7 @@ if (window.innerWidth < 1200) {
                 slidesPerView: 2,
                 spaceBetween: 20,
                 slidesPerGroup: 2,
-                // loop: true,
-                // loopFillGroupWithBlank: true,
                 centeredSlides: false,
-
             }
         }
     });

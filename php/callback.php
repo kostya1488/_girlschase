@@ -1,23 +1,23 @@
 <?php
-$to = "mail@feleton.com";
+$to = "manager@girlschase.com.ua";
 $subject = "Заявка с сайта";
-$headers = "From: message@feleton.com";
+$headers = "From: message@girlschase.com.ua";
 
 if (
 
 isset($_POST["name"]) && 
-isset($_POST["phone"]) && 
-isset($_POST["email"]) && 
-isset($_POST["message"])
+isset($_POST["tel"]) && 
+isset($_POST["insta"]) && 
+isset($_POST["age"])
 
 ) { 
 
 	// Формируем массив для JSON ответа
     $result = array(
-    	'Имя' => $_POST["name"],
-        'Телефон' => $_POST["phone"],
-        'Email' => $_POST["email"],
-    	'Сообщение' => $_POST["message"]        
+    	'name' => $_POST["name"],
+        'tel' => $_POST["tel"],
+        'insta' => $_POST["insta"],
+    	'age' => $_POST["age"]        
     ); 
 
     // Переводим массив в JSON
